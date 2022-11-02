@@ -3,7 +3,7 @@
     /* Color */
     --color-white:#ffffff;
     --color-light-white:#eee;
-    --color-dark-whilte:#bdbdbd;
+    --color-dark-white:#bdbdbd;
     --color-pink: #fe918d;
     --color-dark-pink: #ff6863;
     --color-black:#000;
@@ -240,7 +240,6 @@ p{
     height:3px;
     background-color: var(--color-orange);
 }
-
 .skillset__right{
     flex-basis: 40%;
 }
@@ -248,8 +247,98 @@ p{
     background-color: var(--color-dark-grey);
     padding:20px;
 }
-.tools__list{}
 .etc{
     padding:20px;
 }
-.etc__list{}
+
+/* work */
+#work{}
+.work_categories{}
+.category__btn{
+    border: 1px solid var(--color-dark-whilte);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+}
+.category__btn.active,
+.category__btn:hover{
+    background-color: var(--color-pink);
+    color: var(--color-white);
+}
+.category__count{
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    color:var(--color-white);
+    width: 24px;
+    height: 24px;
+    line-height:24px;
+    display:inline-block;
+    position:relative;
+    top:-20px;
+    left:4px;
+    opacity: 0;
+    transition:all var(--animation-duration) ease-in-out;
+}
+.category__btn.active .category__count,
+.category__btn:hover .category__count{
+    opacity: 1;
+    top:0;
+}
+
+.work__projects{
+    display:flex;
+    flex-wrap:wrap; /*활성창에 맞게 줄바꿈*/
+    justify-content: center;
+}
+.project{
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+    position:relative;
+    background-color: var(--color-light-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project__img{/*크기를 틀에 맞게 조정*/
+    max-width: 100%;
+    max-height: 100%;
+}
+.project__description{
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-black);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition:all var(--animation-duration) ease-in;
+}
+.project:hover .project__description{
+    opacity: 0.8;
+}
+.project__description h3{
+    color: var(--color-white);
+}
+.project__description h3, .project__description span{
+    transform: translateY(-50px);
+    transition:all 0.4s ease-in-out;
+}
+.project:hover .project__description h3,
+.project:hover .project__description span{
+    transform: translateY(0px);
+}
+.project__description h3:after{
+    content:'';
+    display: block;
+    width: 25px;
+    height: 2px;
+    position: relative;
+    left:50%;
+    transform:translateX(-50%);
+    margin-top: 8px;
+    background-color: var(--color-dark-white);
+}
