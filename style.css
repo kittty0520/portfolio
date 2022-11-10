@@ -446,3 +446,22 @@ p{
     height: 80px;
  }
 }
+.arrow-up{
+    position:fixed;
+    bottom:50px;
+    right:50px;
+    background-color: var(--color-pink);
+    height: 40px;
+    width: 40px;
+    font-size: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    color: var(--color-white);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    pointer-events: none;
+}
+.arrow-up.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
