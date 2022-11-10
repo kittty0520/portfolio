@@ -68,6 +68,13 @@ workBtnContainer.addEventListener('click',(e)=>{
     if(filter==null){
         return;
     }
+    //Remove selection from previus and select the new one
+    const active = document.querySelector('.category__btn.active');
+    active.classList.remove('active');
+    const target = e.target.nodeName==='BUTTON'? e.target : e.target.parentNode;
+    target.classList.add('active');
+
+
     projectContainer.classList.add('ani-out');
   
     setTimeout(()=>{
@@ -87,3 +94,4 @@ function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:'smooth'});
 }
+
