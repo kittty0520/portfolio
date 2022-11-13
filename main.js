@@ -32,6 +32,7 @@ navbarMenu.addEventListener('click',(event)=>{
     }
     navbarMenu.classList.remove('open');
     scrollIntoView(link);
+    selectNavItem(target);
 });
 
 //Handle click on "contact me" button on home
@@ -98,8 +99,69 @@ workBtnContainer.addEventListener('click',(e)=>{
     },300);
 })
 
+
+
+//1. 모든 섹션 요소들을 가지고 온다.
+//2. IntersectionOserver를 이용해서 모든 섹션들을 관찰한다.
+//3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 한다.
+
+const sectionIds= [
+    '#home',
+    '#about',
+    '#skill',
+    '#work',
+    '#testimonials',
+    '#contact',
+];
+
+const sections = sectionIds.map(id=>document.querySelector(id));
+const navItems = sectionIds.map(id=>
+    document.querySelector(`[data-link="${id}"]`)
+    );
+
+let selectedNavIndex=0;
+let selectednavItem = navItems[0];
+
+function selectNavItem(selected){
+    selectednavItem.classList.remove('active');
+    selectednavItem = selected;
+    selectednavItem.classList.add('active');
+}
+
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:'smooth'});
+    selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 
+const observerCallback=(entries,observer)=>{
+    entries.forEach(entry=>{
+        if(!entry.isIntersecting && entry.intersectionRatio>0){
+            const index = sectionIds.indexOf(`#${entry.target.id}`);
+            //스크롤링이 아래로 되어서 페이지가 올라옴
+            if(entry.boundingClientRect.y<0){
+                selectedNavIndex = index +1;
+            } else{
+                selectedNavIndex = index -1;
+            }
+        }
+    });
+}
+const observerOptions = {
+    root:null,
+    rootMargin:'0px',
+    threshold: 0.3,
+}
+const observer= new IntersectionObserver(observerCallback,observerOptions);
+
+sections.forEach(section=>observer.observe(section));
+
+window.addEventListener('wheel',()=>{
+    if(window.scrollY === 0){
+        selectedNavIndex = 0;
+    } else if( Math.round(window.scrollY+window.innerHeight) >= document.body.clientHeight){
+        selectedNavIndex=navItems.length-1;
+        console.log('max');
+    }
+    selectNavItem(navItems[selectedNavIndex]);
+});
