@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiyeong's</title>
+    <meta name="description" content="Portfolio for software engineer Jiyeong">
+    <meta name="author" content="Jiyeong">
+
+    <link rel="icon" href="image/png" href="imgs/favicon.png">
+    <script src="https://kit.fontawesome.com/b5069a4a5d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <script src="main2.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <a href="#">JiY</a>
+        </div>
+        <div class="navbar__menu__container">
+            <ul class="navbar__menu">
+                <li class="navbar__menu__item" data-link="#home">Home</li>
+                <li class="navbar__menu__item" data-link="#about">About</li>
+                <li class="navbar__menu__item" data-link="#skill">Skills</li>
+                <li class="navbar__menu__item" data-link="#work">Work</li>
+                <li class="navbar__menu__item" data-link="#contact">Contact</li>
+            </ul>
+        </div>
+        <!-- Toggle button -->
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+        <div class="section__container">
+            <img src="../imgs/snowman.png" alt="JiY's profile photo" class="home__avator">
+            <h1 class="home__title">Hello, <br> I'm coder</h1>
+            <h2 class="home__description">A software Engineer</h2>
+            <button class="home__contact">CONTACT ME</button>
+        </div>
+    </section>
+    <!-- About -->
+    <section id="about">
+        <div class="section__container">
+            <h1>About Me</h1>
+            <p>웹퍼블리셔로 4개월동안 공부하였습니다. 제가 사용할 수 있는 언어는 HTML,CSS,자바스크립트와 타입스크립트, 리액트입니다.</p>
+            <div class="about__majors">
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="major__title">HTML5</div>
+                    <div class="major__description">HTML, CSS, JavaScript</div>
+                </div>
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="major__title">TypeScript</div>
+                    <div class="major__description">TypeScript</div>
+                </div>
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fa-brands fa-vuejs"></i>
+                    </div>
+                    <div class="major__title">React</div>
+                    <div class="major__description">React</div>
+                </div>
+            </div>
+            <div class="about__careers">
+                <div class="job">
+                    <img src="../imgs/school.png" alt="JiY's school" class="job__logo">
+                    <div class="job__description">
+                        <div class="job__name">경희대학교</div>
+                        <div class="job__period">2014.2-2018.8</div>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="../imgs/school.png" alt="JiY's school" class="job__logo">
+                    <div class="job__description">
+                        <div class="job__name">경희대학교</div>
+                        <div class="job__period">2014.2-2018.8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- skill -->
+    <section id="skill">
+        <div class="section__container">
+            <h1>Skills</h1>
+            <h2>Skills & Attributes</h2>
+            <p>Experience with all phases of the software life-cycle. Passion for learning new technologies. Capable of working within a team environment and independently. Ability to plan and time schedule, work under strict time pressure and adapt quickly when needed.</p>
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Skills</h3>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>HTML</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width:80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>css</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width:70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>JavaScript</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width:50%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>TypeScript</span>
+                            <span>0%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width:0%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>React</span>
+                            <span>0%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width:0%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li><span>Visual Studio Code</span></li>
+                            <li><span>Sublime</span></li>
+                            <li><span>Atom</span></li>
+                        </ul>
+                    </div>
+                    <div class="etc">
+                        <h3 class="skillset__title">Etc</h3>
+                        <ul class="etc__list">
+                            <li><span>Figma</span></li>
+                            <li><span>Photoshop</span></li>
+                            <li><span>Illustrator</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- work -->
+    <section id="work">
+        <div class="section__container">
+            <h1>My Work</h1>
+            <h3>Projects</h3>
+            <div class="work__categories">
+                <button class="category__btn active" data-filter="*">
+                    Alls <span class="category__count">8</span>
+                </button>
+                <button class="category__btn" data-filter="webstandard">
+                    Statics<span class="category__count">3</span>
+                </button>
+                <button class="category__btn" data-filter="responsive">
+                    Dynamics<span class="category__count">2</span>
+                </button>
+                <button class="category__btn" data-filter="react">
+                    Reacts<span class="category__count">3</span>
+                </button>     
+            </div>
+            <div class="work__projects">
+                <a href="#" class="project" target="_blank" data-type="webstandard">
+                    <img src="../imgs/projects/project_img.png" alt="webstandard1">
+                    <div class="project__description">
+                        <h4>Webstandard1</h4>
+                        <span>Coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="#" class="project" target="_blank" data-type="webstandard">
+                    <img src="../imgs/projects/project_img.png" alt="webstandard2">
+                    <div class="project__description">
+                        <h4>Webstandard2</h4>
+                        <span>Coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="#" class="project" target="_blank" data-type="webstandard3">
+                    <img src="../imgs/projects/project_img.png" alt="webstandard3">
+                    <div class="project__description">
+                        <h4>Webstandard3</h4>
+                        <span>Coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="#" class="project" target="_blank" data-type="responsive">
+                    <img src="../imgs/projects/project_img.png" alt="responsive1">
+                    <div class="project__description">
+                        <h4>responsive1</h4>
+                        <span>Coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="#" class="project" target="_blank" data-type="responsive">
+                    <img src="../imgs/projects/project_img.png" alt="responsive2">
+                    <div class="project__description">
+                        <h4>responsive2</h4>
+                        <span>Coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="#" class="project" target="_blank" data-type="react">
+                    <img src="../imgs/projects/project_img.png" alt="react1">
+                    <div class="project__description">
+                        <h4>react1</h4>
+                        <span>Coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="#" class="project" target="_blank" data-type="react">
+                    <img src="../imgs/projects/project_img.png" alt="react2">
+                    <div class="project__description">
+                        <h4>react2</h4>
+                        <span>Coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="#" class="project" target="_blank" data-type="react">
+                    <img src="../imgs/projects/project_img.png" alt="react3">
+                    <div class="project__description">
+                        <h4>react3</h4>
+                        <span>Coding with HTML and CSS</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- contact -->
+    <section id="contact">
+        <div class="section__container">
+            <h1 class="contact__title">Let's Talk</h1>
+            <h2 class="contact__email">dheud1004@gmail.com</h2>
+            <div class="contact__links">
+                <a href="https://github.com/kittty0520" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="contact__bottom">
+                <p class="contact__bottom">All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Arrow up -->
+    <button class="arrow-up">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</body>
+</html>
