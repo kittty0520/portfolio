@@ -8,108 +8,26 @@
 
     <script src="https://kit.fontawesome.com/b5069a4a5d.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 
-    <style>
-        body,div{
-            margin: 0;
-            padding: 0;
-        }
-        .container{
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-            background: url("img/background.png") top/contain no-repeat;
-            position:relative;
-        }
-        button{
-            background: transparent;
-            border:none;
-        }
-        .btns{
-            position:absolute;
-            left:50%;
-            top:0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-        }
-        .btns button{
-            border:2px solid #000;
-            border-radius: 4px;
-            padding:8px 12px;
-            margin-bottom: 12px;
-            background: #fff;
-        }
-        .count{
-            border:2px solid #000;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background: #fff;
-        }
-        .clicked{
-            display:none;
-        }
-        .music{
-            color:#333;
-            font-size: 24px;
-        }
-        audio{
-            display:none;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="btns">
-            <button class="start__btn">start</button>
-            <button class="reset__btn">reset</button>
-            <div class="count">count</div>  
-            <div class="music">
-                <audio src="sound/bg.mp3" controls loop></audio>
-                    <i class="fa-solid fa-volume-xmark"></i>
-                    <i class="fa-solid fa-volume-high"></i>
-            </div>
-        </div>
-        
-        <div class="bugs">
-            <div class="bug"><img src="img/bug.png" alt="벌레1"></div>
-            <div class="bug"><img src="img/bug.png" alt="벌레2"></div>
-            <div class="bug"><img src="img/bug.png" alt="벌레3"></div>
-            <div class="bug"><img src="img/bug.png" alt="벌레4"></div>
-            <div class="bug"><img src="img/bug.png" alt="벌레5"></div>
-            <div class="bug"><img src="img/bug.png" alt="벌레6"></div>
-            <div class="bug"><img src="img/bug.png" alt="벌레7"></div>
-            <div class="bug"><img src="img/bug.png" alt="벌레8"></div>
-            <div class="bug"><img src="img/bug.png" alt="벌레9"></div>
-            <div class="bug"><img src="img/bug.png" alt="벌레10"></div>
-        </div>
-        <div class="carrots">
-            <div class="carrot"><img src="img/carrot.png" alt="당근1"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근2"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근3"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근4"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근5"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근6"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근7"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근8"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근9"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근10"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근11"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근12"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근13"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근14"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근15"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근16"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근17"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근18"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근19"></div>
-            <div class="carrot"><img src="img/carrot.png" alt="당근20"></div>
-        </div>
-    </div>
+    <section class="game">
+        <header class="game__header">
+            <button class="game__button">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <span class="game__timer">0:0</span>
+            <span class="game__score">5</span>
+        </header>
+        <section class="game__field"></section>
+    </section>
+    <section class="pop-up pop-up--hide">
+        <button class="pop-up__refresh">
+            <i class="fa-solid fa-rotate-right"></i>
+        </button>
+        <span class="pop-up__message">hello</span>
+    </section>
 </body>
 </html>
