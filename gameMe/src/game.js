@@ -19,7 +19,7 @@ export class GameBuilder{
         this.giftCount = num;
         return this;
     }
-
+    
     bombCount(num){
         this.bombCount = num;
         return this;
