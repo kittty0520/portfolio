@@ -12,6 +12,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/swiper.css">
 
     <!-- 파비콘 -->
     <link rel="stylesheet" href="asset/icons/favicon.ico">
@@ -105,7 +106,16 @@
             </div>
         </div>
         <div class="slider">
-            <div><img src="asset/img/main_slider01.jpg" alt="베스와 베라"></div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ss1">Slide 1</div>
+                    <div class="swiper-slide ss2">Slide 2</div>
+                    <div class="swiper-slide ss3">Slide 3</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
         </div>
     </section>
     <!-- //banner -->
@@ -115,6 +125,19 @@
     <script src="asset/js/jquery.min_1.12.4.js"></script>
     <script src="asset/js/modernizr-custom.js"></script>
     <script src="asset/js/ie-checker.js"></script>
-
+    <script src="asset/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container',{
+            navigation:{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination:{
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+        
+    </script>
 </body>
 </html>
