@@ -172,8 +172,8 @@
 .movie_chart > div > div:last-child{ margin-right: 0;}
 .movie_chart > div > div .poster{position: relative;}
 .movie_chart > div > div .poster img{display: block;}
-.movie_chart > div > div .poster .rank{position: absolute;top:17px;left:0px; width: 50px;height: 50px;line-height: 50px;background-color: var(--color-dark-blue); text-align: center;}
-.movie_chart > div > div .poster .rank strong{ color: var(--color-white);}
+.movie_chart > div > div .poster .rank{position: absolute;top:17px;left:0px; width: 50px;height: 50px;line-height: 50px;background-color: var(--color-dark-blue); text-align: center; box-shadow: 3px 3px 8px rgba(0,0,0,0.5);}
+.movie_chart > div > div .poster .rank strong{ font-size: 22px; color: var(--color-white); text-shadow: 1px 1px 3px rgba(0,0,0,0.5);}
 .movie_chart > div > div .poster .mx{position: absolute;top:17px;right:17px;}
 .movie_chart > div > div .poster .mx span{width: 103px;height: 25px;display: block;}
 .movie_chart > div > div .poster .mx .m{background-position: 0 -75px;}
