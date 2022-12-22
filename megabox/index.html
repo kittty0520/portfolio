@@ -149,10 +149,10 @@
         <div class="container">
             <div class="row">
                 <div class="movie">
-                    <h2 class="ir_so">최신 영화 정보</h2>
+                    <h2 class="ir_so">영화 예매</h2>
                     <div class="movie_title">
                         <ul>
-                            <li><a href="#">박스오피스</a></li>
+                            <li class="active"><a href="#">박스오피스</a></li>
                             <li><a href="#">최신개봉작</a></li>
                             <li><a href="#">상영예정작</a></li>
                             <li><a href="#">큐레이션</a></li>
@@ -788,7 +788,6 @@
 
         movCont.hide().eq(0).show();
         movBtn.click(function(e){
-            console.log('movie');
             e.preventDefault();
             var target = $(this);
             var index = target.index();
@@ -804,13 +803,27 @@
             spaceBetween: 24,
             mousewheel: {
                 invert: true,
-            },
+            }, 
             keyboard: {
                 enabled: true,
                 onlyInViewport: false,
             },
             autoplay: {
-                delay:5000,
+                delay:6000,
+            },
+            breakpoints: {
+                600: {
+                    slidesPerView:1.4,
+                    spaceBetween:24,
+                },
+                768: {
+                    slidesPerView:2,
+                    spaceBetween: 24,
+                },
+                960: {
+                    slidesPerView:3,
+                    spaceBetween: 24,
+                }
             },
         });
     </script>
