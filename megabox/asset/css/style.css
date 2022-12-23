@@ -217,6 +217,34 @@
 .opening .open_box > div p strong{display: block; }
 
 
+/* 새로운 영화 */
+.new{padding: 100px 0; position: relative;}
+.new h2{font-size: 30px;font-weight: var(--weight-medium); margin-bottom: 20px;}
+.new .new_left{position: relative; height: 500px;background: url(../img/new01.jpg) no-repeat center/cover; margin-right: 423px;}
+.new .new_left .play{width: 60px; height: 60px;position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%);background: rgba(255,255,255,0.3); border-radius: 50%;  text-align: center; }
+.new .new_left .play i{ font-size: 36px; color: var(--color-light-white);line-height: 60px; padding-left: 6px;}
+.new .new_right{position: absolute; right: 0; top: 165px; width: 400px; height: 500px; background: var(--color-light-white); padding: 34px; box-sizing: border-box; color: var(--color-light-black);}
+.new .new_right .title{font-size: 28px; color: var(--color-black);}
+.new .new_right .release{font-size: 12px; color: (--color-light-black);}
+.new .new_right .star{ padding: 13px 0;}
+.new .new_right .star strong{font-size: 15px; padding-left: 4px;}
+.new .new_right .star span{display: inline-block;width: 20px;height: 20px;vertical-align: -4px;}
+.new .new_right .star span.star1{ background-position: -393px 0;}
+.new .new_right .star span.star2{ background-position: -411px 0;}
+.new .new_right .star span.star0{ background-position: -374px 0;}
+.new .new_right .summary {font-size: 14px;}
+.new .new_right .genre{padding-bottom: 3px;}
+.new .new_right .age{padding-bottom: 10px;}
+.new .new_right .desc{height: 108px;overflow: hidden; margin-bottom: 20px;}
+.new .new_right .select{overflow: hidden;}
+.new .new_right .select .sel1{float: left; width: 49%; margin-right: 2%;}
+.new .new_right .select .sel2{float: left; width: 49%;}
+.new .new_right .select .sel3{float: left; width: 100%; margin-top: 2%;}
+.new .new_right .select_btn{overflow: hidden; margin-top: 2%;}
+.new .new_right .select_btn a{float: left;display: block; width: 49%; box-sizing: border-box; padding: 10px 30px 12px 30px; text-align: center;}
+.new .new_right .select_btn a.white{background-color: var(--color-white); margin-right: 2%; color: var(--color-dark-blue);border:1px solid var(--color-purple)}
+.new .new_right .select_btn a.purple{background-color: var(--color-dark-blue); color: var(--color-white); border:1px solid var(--color-purple)}
+
 /* 미디어쿼리 */
 @media (max-width:1290px){
     .container{width: 100%;}
@@ -251,7 +279,10 @@
     .opening .open_box {display: none;}
     .opening .desc{ background: none; font-size: 25px;}
 
+    .new .new_left{margin-right: 0; height: 400px;}
+    .new .new_right{position: relative; top: 0;width: 100%;height: auto;}
 }
+
 @media(max-width:768px){
     body{background: var(--color-light-white);}
     .row{padding: 0 16px;}
@@ -279,6 +310,10 @@
 
     #opening{margin: 0;}
 
+    #new .row{padding: 0 24px;}
+    .new{background-color: var(--color-white); margin-top: 24px; padding: 24px;}
+    .new h2{ font-size: 24px; font-weight: var(--weight-bold); margin-bottom: 20px;padding-bottom: 10px;}
+    .new .new_right{padding: 24px;}
 }
 @media(max-width:600px){
     .slider { height: 400px;}
@@ -318,6 +353,17 @@
     .opening h2 .grand{ background-size: 300px; background-position: 0 -105px; width: 197px; height: 24px;}
     .opening .date{display: none;}
     .opening .desc{font-size: 16px; font-weight: var(--weight-regular);padding-bottom: 0;}
+
+    #new .row{padding: 0 8px;}
+    .new{padding: 16px;margin-top: 8px;}
+    .new h2{font-size: 18px; margin-bottom: 0;}
+    .new .new_left{ height: 300px;}
+    .new .new_right{padding: 17px;}
+    .new .new_right .title{font-size: 22px;}
+    .new .new_right .star{padding: 9px 0;;}
+    .new .new_right .select .sel1{width: 100%; margin-right: 0; margin-bottom: 2%;}
+    .new .new_right .select .sel2{width: 100%;}
+
 }
 
 
