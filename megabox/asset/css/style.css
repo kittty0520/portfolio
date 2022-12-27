@@ -245,6 +245,32 @@
 .new .new_right .select_btn a.white{background-color: var(--color-white); margin-right: 2%; color: var(--color-dark-blue);border:1px solid var(--color-purple)}
 .new .new_right .select_btn a.purple{background-color: var(--color-dark-blue); color: var(--color-white); border:1px solid var(--color-purple)}
 
+/* Help */
+.help{overflow: hidden; padding-bottom: 200px;}
+.help article{float: left; width: 32%;margin-right: 2%; }
+.help article:last-child{margin-right: 0;}
+.help article > div{border: 1px solid var(--color-dark-white); height: 350px;}
+.help article h3 {font-size: 30px; font-weight: var(--weight-medium);margin-bottom: 20px;}
+
+/* help-공지사항 */
+.notice{position: relative; padding: 17px; background: var(--color-white);}
+.notice ul{overflow: hidden;}
+.notice ul li{float: left; text-align: center;margin-right: -1px;}
+.notice ul li a{border: 1px solid var(--color-dark-white); font-size: 15px;color: var(--color-light-black); display: block; width: 80px;padding: 10px 20px; background: var(--color-light-white);}
+.notice ul li.active a{ background: var(--color-white);}
+.notice ul li ul{ position: absolute;left: 17px;top: 70px;width: 90%;}
+.notice ul li ul li{width: 100%; box-sizing: border-box; text-align: left;padding: 0 17px; border-bottom: 1px solid var(--color-light-white);}
+.notice ul li ul li:last-child{border-bottom:0;}
+.notice ul li ul li dt em{color: var(--color-light-black);}
+.notice ul li ul li dt{}
+.notice ul li ul li dt .bar{padding-right: 14px;position: relative; }
+.notice ul li ul li dt .bar:after{position:absolute; content: ''; right: 6px; top:7px; width: 1px; height:10px; background: var(--color-light-black);}
+.notice ul li ul li dd{color: var(--color-black); padding-top: 3px;overflow: hidden;text-overflow: ellipsis; white-space: nowrap; color: var(--color-grey); }
+
+
+
+
+
 /* 미디어쿼리 */
 @media (max-width:1290px){
     .container{width: 100%;}
