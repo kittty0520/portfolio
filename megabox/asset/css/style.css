@@ -39,6 +39,11 @@
     --animation-duration: 0.3s;
 }
 
+/* 스킵메뉴 */
+#skip{position: relative;}
+#skip a{position: absolute;left: 0;top: -40px;width: 140px;border: 1px solid var(--color-white); color: var(--color-white); text-align: center;background: var(--color-black);line-height: 30px;}
+#skip a:active, #skip a:focus{top:0;}
+
 /* 레이아웃 */
 #header{
     width: 100%;
