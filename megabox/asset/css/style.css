@@ -268,7 +268,8 @@
 .notice ul li ul li dt{}
 .notice ul li ul li dt .bar{padding-right: 14px;position: relative; }
 .notice ul li ul li dt .bar:after{position:absolute; content: ''; right: 6px; top:7px; width: 1px; height:10px; background: var(--color-light-black);}
-.notice ul li ul li dd{color: var(--color-black); padding-top: 3px;overflow: hidden;text-overflow: ellipsis; white-space: nowrap; color: var(--color-grey); }
+.notice ul li ul li dd{color: var(--color-black); padding-top: 3px; color: var(--color-grey); }
+.notice ul li ul li a{border:0;padding: 0;width: 100%;overflow: hidden;text-overflow: ellipsis; white-space: nowrap; }
 
 
 

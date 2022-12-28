@@ -897,14 +897,14 @@
                         <h3>공지사항</h3>
                         <div class="notice">
                             <ul>
-                                <li class="active"><a href="#">전체 공지
+                                <li class="active"><a href="#">전체 공지</a>
                                     <ul>
                                         <li>
                                             <dl>
                                                 <dt>
                                                     <strong class="bar">전체</strong><em>2019.05.28</em>
                                                 </dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
@@ -912,7 +912,7 @@
                                                 <dt>
                                                     <strong class="bar">전체</strong><em>2019.05.28</em>
                                                 </dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
@@ -920,7 +920,7 @@
                                                 <dt>
                                                     <strong class="bar">전체</strong><em>2019.05.28</em>
                                                 </dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
@@ -928,19 +928,19 @@
                                                 <dt>
                                                     <strong class="bar">전체</strong><em>2019.05.28</em>
                                                 </dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                     </ul>
-                                </a></li>
-                                <li><a href="#">영화관 공지
-                                    <ul style="display:none">
+                                </li>
+                                <li><a href="#">영화관 공지</a>
+                                    <ul>
                                         <li>
                                             <dl>
                                                 <dt>
                                                     <strong class="bar">안양</strong><em>2019.05.28</em>
                                                 </dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
@@ -948,7 +948,7 @@
                                                 <dt>
                                                     <strong class="bar">인덕원</strong><em>2019.05.28</em>
                                                 </dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
@@ -956,7 +956,7 @@
                                                 <dt>
                                                     <strong class="bar">서울</strong><em>2019.05.28</em>
                                                 </dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
@@ -964,11 +964,11 @@
                                                 <dt>
                                                     <strong class="bar">인천</strong><em>2019.05.28</em>
                                                 </dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                     </ul>
-                                </a></li>
+                                </li>
                             </ul>
                         </div>
                     </article>
@@ -1541,6 +1541,22 @@
                 }
             },
         });
+
+        // 공지사항 탭 메뉴
+        var tabMenu = $(".notice");
+
+        //컨텐츠 내용을 숨김
+        tabMenu.find("ul> li >ul").hide();
+        tabMenu.find("li.active>ul").show();
+
+        function tabList(e){
+            e.preventDefault(); //#의 기능을 차단
+            var target = $(this);
+            target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
+            //버튼을 클릭하면 ul을 보여주고, 부모의 li태그에 클래스를 추가하고, 형제의 li태그에 클래스를 제거하고, 제거한 자식의 ul 태그를 숨겨줌
+        }
+
+        tabMenu.find("ul>li>a").click(tabList).focus(tabList);
     </script>
 </body>
 </html>
