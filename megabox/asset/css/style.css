@@ -260,7 +260,7 @@
 .notice ul li a{border: 1px solid var(--color-dark-white); font-size: 15px;color: var(--color-light-black); display: block; width: 80px;padding: 10px 20px; background: var(--color-light-white);}
 .notice ul li.active a{ background: var(--color-white);}
 .notice ul li ul{ position: absolute;left: 17px;top: 70px;width: 90%;}
-.notice ul li ul li{width: 100%; box-sizing: border-box; text-align: left;padding: 0 17px; border-bottom: 1px solid var(--color-light-white);}
+.notice ul li ul li{width: 100%; box-sizing: border-box; text-align: left;padding: 14px; border-bottom: 1px solid var(--color-light-white);}
 .notice ul li ul li:last-child{border-bottom:0;}
 .notice ul li ul li dt em{color: var(--color-light-black);}
 .notice ul li ul li dt{}
@@ -269,11 +269,11 @@
 .notice ul li ul li dd{color: var(--color-black); padding-top: 3px;overflow: hidden;text-overflow: ellipsis; white-space: nowrap; color: var(--color-grey); }
 
 
+
 /* help-할인카드 */
 .card{padding: 17px;}
 .card ul{}
 .card ul li{position: relative; border:1px solid var(--color-dark-white);margin-bottom: 15px; min-height: 102px; box-sizing: border-box; padding: 17px;}
-.card ul li a{}
 .card ul li a span{position: absolute;left: 17px;top: 17px;}
 .card ul li a span img{width: 105px;}
 .card ul li a strong{display: block;font-size: 18px; padding-left: 130px;color: var(--color-light-black);}
@@ -281,10 +281,8 @@
 
 
 /* help- 고객센터 */
-.service{}
 .service ul { overflow: hidden;border-right: 1px solid var(--color-dark-white); border-bottom: 1px solid var(--color-dark-white);}
 .service li{float: left; width: 50%;height: 193px;box-sizing: border-box;border-top: 1px solid var(--color-dark-white); border-left: 1px solid var(--color-dark-white); text-align: center;}
-.service li a{}
 .service li a span{display: block; width: 120px;height: 120px;margin: 20px auto 0 auto;overflow: hidden;}
 .service li a strong{color: var(--color-light-black); font-size: 16px; font-weight: var(--weight-medium);}
 
@@ -307,6 +305,12 @@
     .header h1 strong {left:24px; top:6px;}
     .banner_menu .bm_left ul{display:none;}
     .banner_menu .bm_right ul:first-child{display:none;}
+
+    .help article.help_box1{width: 49%;margin-right: 2%;}
+    .help article.help_box2{width: 49%;margin-right: 0;}
+    .help article.help_box3{width: 100%;margin-top: 2%;}
+    .service li{width: 25%;}
+    .service li a strong{width: 25%; height: auto;}
 }
 
 @media(max-width:960px){
@@ -358,6 +362,23 @@
     .new{background-color: var(--color-white); margin-top: 24px; padding: 24px;}
     .new h2{ font-size: 24px; font-weight: var(--weight-bold); margin-bottom: 20px;padding-bottom: 10px;}
     .new .new_right{padding: 24px;}
+
+    #help .row{padding: 0 24px;}
+    .help{padding-bottom: 24px;}
+    .help article.help_box1,
+    .help article.help_box2,
+    .help article.help_box3
+    {width: 100%; background: var(--color-white);  margin-top: 24px; margin-right: 0; padding: 24px; box-sizing: border-box;}
+    .help article.help_box3{padding: 0;}
+    .help article.help_box3 >div {height: auto;}
+    .help article h3{font-size: 24px; font-weight: var(--weight-bold); margin-bottom: 20px;padding-bottom: 10px;}
+    .help article.help_box3 h3 { display: none;}
+    .service ul {border:0;}
+    .service ul li {border:0;}
+
+    .card{ height: 338px !important;}
+
+
 }
 @media(max-width:600px){
     .slider { height: 400px;}
@@ -408,12 +429,42 @@
     .new .new_right .select .sel1{width: 100%; margin-right: 0; margin-bottom: 2%;}
     .new .new_right .select .sel2{width: 100%;}
 
+    #help .row{padding: 0 8px;}
+    .help article.help_box1,
+    .help article.help_box2{
+        margin-top: 8px;padding: 16px;
+    }
+    .help article.help_box3{margin-top: 8px;}
+    .help article h3 {font-size: 18px;}
+    .service li{width: 50%;}
+    .service li:nth-child(odd){border-right: 1px solid var(--color-dark-white);}
+    .service li:nth-child(1){border-bottom: 1px solid var(--color-dark-white);}
+    .service li:nth-child(2){border-bottom: 1px solid var(--color-dark-white);}
 }
 
 
 @media(max-width:480px){
     .movie_title ul li a {margin-right: 9px;}
+
+    .notice ul li a{padding: 5px 10px;}
+    .notice ul li ul li{padding: 13px;}
+
+    .card ul li a span img{width: 80px;}
+    .card ul li a strong{padding-left: 90px;font-size: 16px;}
+    .card ul li a em{padding-left: 90px;font-size: 14px;}
 }
 @media(max-width:320px){
-    
+    .help article > div{height: 287px;}
+    .help article h3{margin-bottom: 0;}
+    .notice{ padding: 8px;}
+    .notice ul li ul{left: 9px;top: 56px;}
+    .card{padding: 8px; height: 258px !important;}
+    .card ul li{padding: 8px; min-height: auto;margin-bottom: 8px;}
+    .card ul li a span {left: 11px;top: 12px;}
+    .card ul li a span img{width: 60px;}
+    .card ul li a strong{padding-left: 70px; font-size: 14px;}
+    .card ul li a em{padding-left: 70px;}
+    .service li{height: 138px;}
+    .service li a span{width: 70px;height: 70px;}
+    .service li a strong{font-size: 14px;}
 }
