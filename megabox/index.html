@@ -16,9 +16,9 @@
 
     <!-- 파비콘 -->
     <link rel="stylesheet" href="asset/icons/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="asset/icons/favicon_96.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="asset/icons/favicon_144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="asset/icons/favicon_192.png" />
 
     <!-- 페이스북 메타 태그 -->
     <meta property="og:title" content="메가박스 사이트 만들기" />
@@ -48,7 +48,6 @@
     
 </head>
 <body>
-    <!-- 스킵 메뉴 -->
     <div id="skip">
         <a rel="bookmark" href="#movie">최신 영화소식</a>
         <a rel="bookmark" href="#event">새로운 이벤트</a>
@@ -826,8 +825,8 @@
                 <div class="new">
                     <h2>새로운 영화</h2>
                     <div class="new_left">
-                        <div class="play">
-                            <i class="fa-solid fa-play"></i>
+                        <div class="play" id="showTrailer" data-youtube="kihrFxwdMb4">
+                            <a href="#"><i class="fa-solid fa-play"></i></a>
                         </div>
                     </div>
                     <div class="new_right">
@@ -1482,89 +1481,21 @@
     </section>
     <!-- //footer -->
 
+    <aside id="blackout" class="overlay">
+        <div id="trailerModal" class="modal">
+            <div id="trailer"></div><!--YouTube 플레이어로 대체되는 부분-->
+        </div>
+        <button id="hideTrailer" class="modal_close ir_pm">닫기</button>
+    </aside>
+    <!-- //트레일러 -->
+
     <!-- 자바스크립트 라이브러리 -->
     <script src="asset/js/jquery.min_1.12.4.js"></script>
     <script src="asset/js/modernizr-custom.js"></script>
     <script src="asset/js/ie-checker.js"></script>
     <script src="asset/js/swiper.min.js"></script>
-    <script>
-        
-
-        //배너 이미지 슬라이드
-        var mySwiper = new Swiper ('.swiper-container',{
-            navigation:{
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination:{
-                el: '.swiper-pagination',
-                type: 'bullets',
-            },
-            autoplay:{
-                delay:5000,
-            },
-        });
-        
-        //영화 차트 탭 메뉴
-        var movBtn = $(".movie_title>ul>li");
-        var movCont = $(".movie_chart>div");
-
-        movCont.hide().eq(0).show();
-        movBtn.click(function(e){
-            e.preventDefault();
-            var target = $(this);
-            var index = target.index();
-            movBtn.removeClass("active");
-            target.addClass("active");
-            movCont.css("display","none");
-            movCont.eq(index).css("display","block");
-        });
-
-        //영화차트 이미지 슬라이드
-        var mySwiper = new Swiper ('.swiper-container2',{
-            slidesPerView:4,
-            spaceBetween: 24,
-            mousewheel: {
-                invert: true,
-            }, 
-            keyboard: {
-                enabled: true,
-                onlyInViewport: false,
-            },
-            autoplay: {
-                delay:6000,
-            },
-            breakpoints: {
-                600: {
-                    slidesPerView:1.4,
-                    spaceBetween:24,
-                },
-                768: {
-                    slidesPerView:2,
-                    spaceBetween: 24,
-                },
-                960: {
-                    slidesPerView:3,
-                    spaceBetween: 24,
-                }
-            },
-        });
-
-        // 공지사항 탭 메뉴
-        var tabMenu = $(".notice");
-
-        //컨텐츠 내용을 숨김
-        tabMenu.find("ul> li >ul").hide();
-        tabMenu.find("li.active>ul").show();
-
-        function tabList(e){
-            e.preventDefault(); //#의 기능을 차단
-            var target = $(this);
-            target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
-            //버튼을 클릭하면 ul을 보여주고, 부모의 li태그에 클래스를 추가하고, 형제의 li태그에 클래스를 제거하고, 제거한 자식의 ul 태그를 숨겨줌
-        }
-
-        tabMenu.find("ul>li>a").click(tabList).focus(tabList);
-    </script>
+    <script src="asset/js/movie.js"></script>
+    <script src="asset/js/custom.js"></script>
+    <script src="asset/js/iframe_api.js"></script>
 </body>
 </html>

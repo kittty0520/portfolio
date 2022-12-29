@@ -38,7 +38,7 @@
         function setPlayer( id ) {
             player.obj = new YT.Player( "trailer", {
                 width: 480,
-                height: 282,
+                height:282,
                 videoId: id,    
                 playerVars: player.query
             });
@@ -60,9 +60,9 @@
             viewport.height = $( window ).height();
 
             frame.width = viewport.width;
-            frame.height = frame.width / 1.6; // 16 : 10
+            frame.height = frame.width/1.6; // 16 : 10
 
-            modal.top = ( ( viewport.height - frame.height ) / 2 ) + "px";
+            modal.top =  ( ( viewport.height - frame.height ) / 2 ) +"px";
             modal.left = "0px";
 
             $selector.modal.css( modal );

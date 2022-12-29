@@ -323,6 +323,13 @@
 .footer__info address p{color:var(--color-light-grey); padding-bottom: 15px;}
 
 
+/* 트레일러 */
+.overlay{background: rgba(0,0,0,0.9); display: none;width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 10000;}
+.modal{position: absolute;}
+.modal_close{background: url(../img/close.svg) no-repeat; background-size: 32px 32px;display: block;border: 0; width: 32px; height: 32px;overflow: hidden;position: absolute;top: 24px;right: 24px;text-indent: 100%;}
+body.modal_on{overflow: hidden;}
+
+
 /* 미디어쿼리 */
 @media (max-width:1290px){
     .container{width: 100%;}
