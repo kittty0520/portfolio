@@ -19,53 +19,75 @@ const startBtn = document.querySelector('.start__button');
 const startTitle = document.querySelector('.start__title');
 const startPage = document.querySelector('.start');
 
-const questions = document.querySelector('.questions');
+const questionField = document.querySelector('.questions');
 const question = document.querySelector('.question'); 
 const answer = document.querySelector('.answers__list');
+const nextButton = document.querySelector('.answer__button');
+
+
+let questionNum = 0;
+let answerNum=0;
 
 startBtn.addEventListener('click',()=>{
-    CloseStart();
-    questions.style.display='block';
-    StartQuestion();
+    closeStart();
+    questionField.style.display='block';
+    startQuestion();
 });
 
-function CloseStart(){
+nextButton.addEventListener('click',()=>{
+    nextQuestion();
+});
+
+function closeStart(){
     startPage.style.display='none';
 }
 
-function StartQuestion(){
+function startQuestion(){
     question.innerHTML='';
-    addItem('newQuestion', question);
-    addItem('newAnswer', answer);
+    questionSet();
+    answerSet();
 }
 
-function addItem(className, field){
-    const item = document.createElement('div');
-    item.setAttribute('class', className);
-    item.style.border="1px solid #333";
-    item.innerHTML= field === question? questionSet(): answerSet();
-    field.appendChild(item);
+function nextQuestion(){
+    question.innerHTML='';
+    answer.innerHTML='';
+    if(questionNum < questionList.length){
+        questionSet();
+        answerSet();
+    } else {
+        endQuestion();
+    }
+}
+
+function endQuestion(){
+    alert('질문 끝! 결과를 보여주세요');
+    questionField.style.display='none';
+    an
 }
 
 function questionSet(){
-    let questionNum = 0;
-    const newQuestion = questionList[questionNum];
+    const item = document.createElement("div");
+    item.setAttribute('class', 'newQuestion');
+    const newQuestion = questionList[questionNum].toString();
     questionNum++;
-    return newQuestion;
+    item.innerHTML= newQuestion;
+    question.appendChild(item);
+    console.log(questionNum);
 }
 
 function answerSet(){
-    let answerNum = 0;
-    let newAnswer = answerList[answerNum];
-    return newAnswer.map(item=>styleAnswer(item));
+    const getAnswerList = answerList[answerNum];
+    const newAnswer = getAnswerList.forEach(function(item){
+        const answerButton = document.createElement("button");
+        answerButton.setAttribute('class','newAnswer');
+        answerButton.value = item.toString();
+        answerButton.innerHTML = item.toString();
+        answer.appendChild(answerButton);
+    });
+    answerNum++;
+    console.log(answerNum);
 }
 
-function styleAnswer(item){
-    const answer = document.createElement('button');
-    answer.setAttribute('class', 'answer__each');
-    answer.style.border = '1px solid #666';
-    answer.style.margin = '10px';
-    answer.innerHTML=item;
-}
+
 
 
